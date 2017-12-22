@@ -70,7 +70,7 @@ def cleaned_text(text):
             unwanted_characters = unwanted_characters.replace(char, '')
 
     # remove letters and numbers from unwanted characters
-    unwanted_characters = re.sub('[A-Za-zàâèé]+', '', unwanted_characters)
+    unwanted_characters = re.sub('[A-Za-z]+', '', unwanted_characters)
 
     # remove unwanted characters from the text
     for char in unwanted_characters:
