@@ -39,7 +39,7 @@ def build_part1_RNN(window_size):
     :param windows_size: window size of the input
     :return: Keras model
     '''
-    num_hidden_units = 7
+    num_hidden_units = 5
 
     model = Sequential()
     model.add(LSTM(num_hidden_units, input_shape=(window_size, 1)))
@@ -70,7 +70,7 @@ def cleaned_text(text):
             unwanted_characters = unwanted_characters.replace(char, '')
 
     # remove letters and numbers from unwanted characters
-    unwanted_characters = re.sub('[A-Za-z0-9àâèé]+', '', unwanted_characters)
+    unwanted_characters = re.sub('[A-Za-zàâèé]+', '', unwanted_characters)
 
     # remove unwanted characters from the text
     for char in unwanted_characters:
