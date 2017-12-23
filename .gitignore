@@ -17,6 +17,8 @@ __pycache__/
 venv/
 ENV/
 
+model_weights/
+text_gen_output/
 
 *.zip
 *.txt
